@@ -225,11 +225,14 @@ __marimo__/
 # PyCharm settings
 .idea/
 
-# Project data (belongs in S3, not GitHub)
+# Project data (full data belongs in S3, not GitHub)
 *.pb
-sample_data/
 *.parquet
 *.zip
+
+# But allow small samples
+!sample_data/
+!sample_data/*.pb
 
 .aws/
 *.pem
