@@ -218,3 +218,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# macOS
+.DS_Store
+
+# PyCharm settings
+.idea/
+
+# Project data (belongs in S3, not GitHub)
+*.pb
+sample_data/
+*.parquet
+*.zip
+
+.aws/
+*.pem
+
+
