@@ -237,4 +237,6 @@ __marimo__/
 .aws/
 *.pem
 
+# Static GTFS extracted locally (belongs in S3, not GitHub)
+gtfs/
 
