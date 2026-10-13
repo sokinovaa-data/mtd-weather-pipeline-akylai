@@ -1,5 +1,6 @@
 import requests
 from google.transit import gtfs_realtime_pb2
+import time
 
 
 FEEDS = {
@@ -39,3 +40,11 @@ for name, url in FEEDS.items():
                     counts[field.name] += 1
         if counts:
             print("Vehicle fields populated (out of", len(feed.entity), "):", dict(counts))
+            if counts:
+                print("Vehicle fields populated (out of", len(feed.entity), "):", dict(counts))
+
+        # NEW: age of vehicle records (indent 4 spaces, same level as "if feed.entity:")
+        vts = [e.vehicle.timestamp for e in feed.entity if e.HasField("vehicle") and e.vehicle.timestamp]
+        if vts:
+            now = time.time()
+            print("Vehicle age in seconds: newest", round(now - max(vts)), "oldest", round(now - min(vts)))
