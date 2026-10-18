@@ -38,3 +38,8 @@ MSCK REPAIR TABLE mtd.gtfs_routes;
 WITH rt AS (SELECT DISTINCT trip_id FROM mtd.trip_updates WHERE "date" = '2026-10-14')
 SELECT COUNT(*) AS realtime_trips, COUNT(s.trip_id) AS found_in_schedule
 FROM rt LEFT JOIN mtd.gtfs_trips s ON rt.trip_id = s.trip_id;
+
+-- Notes for myself!!!
+-- After a new schedule is processed, register it in all six tables.
+-- From CloudShell, run the for-loop of MSCK REPAIR statements, or run each
+-- statement separately in the Athena editor.
