@@ -1,0 +1,543 @@
+
+=== vehicle_positions ===
+Status: 200
+Content-Type: application/x-protobuf
+Size: 2.9 KB
+Feed timestamp: 1791692643
+Entities: 22
+vehicles: 22
+trip updates: 0
+alerts: 0
+id: "2424"
+vehicle {
+  trip {
+    trip_id: "[@124.0.92311676@][1484576395235]/17__GR2_SA"
+    route_id: "GREEN EVENING SATURDAY"
+  }
+  position {
+    latitude: 40.1116486
+    longitude: -88.2078323
+  }
+  current_status: IN_TRANSIT_TO
+  timestamp: 1791692639
+  congestion_level: RUNNING_SMOOTHLY
+  stop_id: "LSE:8"
+  vehicle {
+    id: "2424"
+    label: "2424"
+  }
+  occupancy_status: EMPTY
+}
+
+Readable time (UTC): 2026-10-11 04:24:03+00:00
+Vehicle fields populated (out of 22 ): {'trip': 22, 'position': 22, 'current_status': 22, 'timestamp': 22, 'congestion_level': 22, 'stop_id': 22, 'vehicle': 22, 'occupancy_status': 22}
+
+=== trip_updates ===
+Status: 200
+Content-Type: application/x-protobuf
+Size: 53.4 KB
+Feed timestamp: 1791692624
+Entities: 54
+vehicles: 0
+trip updates: 54
+alerts: 0
+id: "[@124.0.143440025@][31][1591369188136]/2__GR5_SA"
+trip_update {
+  trip {
+    trip_id: "[@124.0.143440025@][31][1591369188136]/2__GR5_SA"
+    start_time: "22:46:00"
+    start_date: "20261010"
+    route_id: "GREY EVENING SATURDAY"
+  }
+  stop_time_update {
+    stop_sequence: 58
+    arrival {
+      time: 1791692574
+    }
+    departure {
+      time: 1791692574
+    }
+    stop_id: "PKWRT:6"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 59
+    arrival {
+      time: 1791692589
+    }
+    departure {
+      time: 1791692589
+    }
+    stop_id: "PKRMN:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 60
+    arrival {
+      time: 1791692620
+    }
+    departure {
+      time: 1791692620
+    }
+    stop_id: "GWNPK:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 61
+    arrival {
+      time: 1791692660
+    }
+    departure {
+      time: 1791692660
+    }
+    stop_id: "GWNCHCH:2"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 62
+    arrival {
+      time: 1791692680
+    }
+    departure {
+      time: 1791692680
+    }
+    stop_id: "FRVWGWN:2"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 63
+    arrival {
+      time: 1791692697
+    }
+    departure {
+      time: 1791692697
+    }
+    stop_id: "FRVWHRVY:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 64
+    arrival {
+      time: 1791692721
+    }
+    departure {
+      time: 1791692721
+    }
+    stop_id: "FRVWLNCLN:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 65
+    arrival {
+      time: 1791692788
+    }
+    departure {
+      time: 1791692788
+    }
+    stop_id: "FRVWBUSEY:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 66
+    arrival {
+      time: 1791692808
+    }
+    departure {
+      time: 1791692808
+    }
+    stop_id: "CLRFRVW:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 67
+    arrival {
+      time: 1791692825
+    }
+    departure {
+      time: 1791692825
+    }
+    stop_id: "CLRCHCH:4"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 68
+    arrival {
+      time: 1791692842
+    }
+    departure {
+      time: 1791692842
+    }
+    stop_id: "CHCHORCD:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 69
+    arrival {
+      time: 1791692910
+    }
+    departure {
+      time: 1791692910
+    }
+    stop_id: "UNIMCLGH:6"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 70
+    arrival {
+      time: 1791692936
+    }
+    departure {
+      time: 1791692936
+    }
+    stop_id: "UNIRACE:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 71
+    arrival {
+      time: 1791692953
+    }
+    departure {
+      time: 1791692953
+    }
+    stop_id: "BDWYUNI:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 72
+    arrival {
+      time: 1791692953
+    }
+    departure {
+      time: 1791692953
+    }
+    stop_id: "VINWTR:4"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 73
+    arrival {
+      time: 1791693106
+    }
+    departure {
+      time: 1791693180
+    }
+    stop_id: "LSE:1"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 74
+    arrival {
+      time: 1791693283
+    }
+    departure {
+      time: 1791693283
+    }
+    stop_id: "MNUBNA:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 75
+    arrival {
+      time: 1791693313
+    }
+    departure {
+      time: 1791693313
+    }
+    stop_id: "MNGRV:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 76
+    arrival {
+      time: 1791693348
+    }
+    departure {
+      time: 1791693348
+    }
+    stop_id: "MNLYN:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 77
+    arrival {
+      time: 1791693380
+    }
+    departure {
+      time: 1791693380
+    }
+    stop_id: "MNCTGRV:6"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 78
+    arrival {
+      time: 1791693400
+    }
+    departure {
+      time: 1791693400
+    }
+    stop_id: "MNGLVR:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 79
+    arrival {
+      time: 1791693410
+    }
+    departure {
+      time: 1791693410
+    }
+    stop_id: "MNHTL:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 80
+    arrival {
+      time: 1791693445
+    }
+    departure {
+      time: 1791693445
+    }
+    stop_id: "MNLRMN:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 81
+    arrival {
+      time: 1791693470
+    }
+    departure {
+      time: 1791693470
+    }
+    stop_id: "DART:1"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 82
+    arrival {
+      time: 1791693495
+    }
+    departure {
+      time: 1791693495
+    }
+    stop_id: "CCSJ:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 83
+    arrival {
+      time: 1791693540
+    }
+    departure {
+      time: 1791693540
+    }
+    stop_id: "WASHLRMN:6"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 84
+    arrival {
+      time: 1791693555
+    }
+    departure {
+      time: 1791693555
+    }
+    stop_id: "WASHLNR:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 85
+    arrival {
+      time: 1791693585
+    }
+    departure {
+      time: 1791693585
+    }
+    stop_id: "WASHRAIN:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 86
+    arrival {
+      time: 1791693625
+    }
+    departure {
+      time: 1791693625
+    }
+    stop_id: "WASHKNCH:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 87
+    arrival {
+      time: 1791693660
+    }
+    departure {
+      time: 1791693660
+    }
+    stop_id: "WASHTIM:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 88
+    arrival {
+      time: 1791693675
+    }
+    departure {
+      time: 1791693675
+    }
+    stop_id: "WASHSMITH:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 89
+    arrival {
+      time: 1791693710
+    }
+    departure {
+      time: 1791693710
+    }
+    stop_id: "WASHSCWD:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 90
+    arrival {
+      time: 1791693745
+    }
+    departure {
+      time: 1791693745
+    }
+    stop_id: "WASHMCRTR:5"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 91
+    arrival {
+      time: 1791693770
+    }
+    departure {
+      time: 1791693770
+    }
+    stop_id: "MCRTRCA:2"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 92
+    arrival {
+      time: 1791693805
+    }
+    departure {
+      time: 1791693805
+    }
+    stop_id: "BRDYHI:3"
+    schedule_relationship: SCHEDULED
+  }
+  stop_time_update {
+    stop_sequence: 93
+    arrival {
+      time: 1791693840
+    }
+    departure {
+      time: 1791693840
+    }
+    stop_id: "MNBRDY:2"
+    schedule_relationship: SCHEDULED
+  }
+  vehicle {
+    id: "1718"
+  }
+}
+
+Readable time (UTC): 2026-10-11 04:23:44+00:00
+
+=== service_alerts ===
+Status: 200
+Content-Type: application/x-protobuf
+Size: 2.3 KB
+Feed timestamp: 1791692635
+Entities: 6
+vehicles: 0
+trip updates: 0
+alerts: 6
+id: "135a553f53254ef7b7a1f783da7fa813"
+alert {
+  active_period {
+    start: 1783918800
+    end: 1796018400
+  }
+  informed_entity {
+    route_id: "GOLD"
+  }
+  informed_entity {
+    route_id: "GOLD ALT"
+  }
+  informed_entity {
+    route_id: "GOLDHOPPER"
+  }
+  informed_entity {
+    route_id: "GREY"
+  }
+  informed_entity {
+    route_id: "GREY ALT"
+  }
+  informed_entity {
+    route_id: "GREY EVENING"
+  }
+  informed_entity {
+    route_id: "GREY EVENING SATURDAY"
+  }
+  informed_entity {
+    route_id: "GREY SATURDAY"
+  }
+  informed_entity {
+    route_id: "GREY SUNDAY"
+  }
+  informed_entity {
+    route_id: "ORANGE"
+  }
+  informed_entity {
+    route_id: "ORANGE ALT"
+  }
+  informed_entity {
+    route_id: "ORANGEHOPPER"
+  }
+  informed_entity {
+    route_id: "RUBY"
+  }
+  informed_entity {
+    route_id: "RUBY EVENING"
+  }
+  informed_entity {
+    route_id: "RUBY EVENING SATURDAY"
+  }
+  informed_entity {
+    route_id: "RUBY SATURDAY"
+  }
+  informed_entity {
+    route_id: "RUBY SUNDAY"
+  }
+  cause: CONSTRUCTION
+  effect: UNKNOWN_EFFECT
+  url {
+    translation {
+      text: "https://mtd.org/maps-and-schedules/reroutes/reroute/135a553f53254ef7b7a1f783da7fa813"
+      language: "en"
+    }
+  }
+  header_text {
+    translation {
+      text: "Broadway closed between University & Water."
+      language: "en"
+    }
+  }
+  description_text {
+    translation {
+      text: "In order to replace water mains, Broadway remains closed to bus traffic between University Avenue and Water St.  "
+      language: "en"
+    }
+  }
+}
+
+Readable time (UTC): 2026-10-11 04:23:55+00:00
