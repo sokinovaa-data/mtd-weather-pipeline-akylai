@@ -50,3 +50,32 @@ Phase 2: The pipeline also loads the processed data into Redshift Serverless. (S
 ├── LICENSE
 └── README.md
 ```
+## Architecture diagram
+<img width="800" height="1100" alt="photo_5409082152344821483_y" src="https://github.com/user-attachments/assets/0702d933-96a8-4682-a174-e167e4e941c1" />
+
+
+
+1. Collect: EventBridge triggers 5 Lambda functions on schedule to collect the data from
+sources:
+.\
+Source1:MTD Bus Schedules https://developer.cumtd.com/ .\
+Source2: https://api.weather.gov/ 
+
+(every 1 minute, 2 minutes, 10 minutes, 1 hour, and 1 day) and saves them as raw files in an S3 bucket.
+
+2. Transform: AWS Glue performs daily batch processing: it reads the raw data files, transforms them,
+and saves them as processed or rejected files.
+
+3. Query: Athena makes it available to run  SQL on the processed Parquet files in place, using the table
+ definitions stored in the Glue Data Catalog.
+
+
+
+
+
+
+
+
+
+
+
