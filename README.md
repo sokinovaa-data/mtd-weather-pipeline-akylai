@@ -50,6 +50,12 @@ Phase 2: The pipeline also loads the processed data into Redshift Serverless. (S
 ├── LICENSE
 └── README.md
 ```
+## Tech stack
+
+Python, SQL, PySpark, AWS Lambda, EventBridge, S3, Glue, Athena, CloudWatch, SNS, IAM, Parquet, GTFS-Realtime (protobuf), Redshift
+
+
+
 ## Architecture diagram
 <img width="800" height="1100" alt="photo_5409082152344821483_y" src="https://github.com/user-attachments/assets/0702d933-96a8-4682-a174-e167e4e941c1" />
 
@@ -73,6 +79,55 @@ and saves them as processed or rejected files.
 
 
 
+Data Models
+``` text
+Realtime feeds (GTFS-Realtime, protobuf)
+1. Vehicle positions
+Entity: one bus position report, about 61,000 rows a day.
+
+Fields: vehicle_id, trip_id, route_id, lat, lon, status, stop_id, congestion, occupancy, vehicle_time, snapshot_time, source_key.
+Unique row: vehicle_id + vehicle_time.
+Joins: trip_id to trips, route_id to routes, stop_id to stops.
+
+2. Trip updates
+Entity: one predicted stop for one trip in one snapshot, about 3 million rows a day.
+
+Fields: trip_id, route_id, vehicle_id, stop_id, stop_sequence, arrival_time, departure_time, start_date, service_date, snapshot_time. The delay columns are empty because MTD sends no delay.
+Unique row: trip_id + start_date + stop_sequence + snapshot_time.
+Joins: trip_id to trips. trip_id + stop_sequence to stop_times.
+
+3. Service alerts
+Entity: one announcement, such as a closure or detour.
+Fields in the feed: alert ID, active period, affected route IDs, cause, effect, URL, header and description text.
+```
+
+```text
+MTD static schedule (GTFS, zip of CSV files)
+Entities: routes (90 rows), trips (5,348), stops (1,921), stop_times (196,102), calendar (312), calendar_dates (12,395).
+
+Fields: route_id, trip_id, stop_id, service_id, names, coordinates, scheduled times. arrival_secs stores each time as seconds after midnight, so times past 24:00 work.
+Joins: trips to routes. stop_times to trips and stops. trips.service_id to calendar and calendar_dates.
+Versions: each saved copy gets a feed_version. The first is 2026-10-14, and the feed is valid through 2026-12-19.
+```
+
+
+``` text
+NWS weather (station KCMI, JSON)
+
+Fields: station_id, observed_time, temperature_c, dewpoint_c, relative_humidity_pct, wind_speed_kmh, wind_direction_deg, pressure_pa, visibility_m, text_description, precip_last_3h_mm.
+Unique row: station_id + observed_time.
+Joins: none by key. Weather joins the bus data by UTC hour.
+```
+Storage choice .\
+raw/: native formats, grouped by date and hour, never edited.
+processed/: Parquet partitioned by date (feed_version for the schedule), one file per day.
+rejected/: rows that failed validation, with a reason.
+Nine table definitions in the Glue Data Catalog database mtd.
+Retention
+Raw and processed files are kept. A rerun replaces that day’s processed file.
+S3 versioning is on, and a lifecycle rule removes old versions.
+Lambda logs expire after 14 days.
+```
 
 
 
