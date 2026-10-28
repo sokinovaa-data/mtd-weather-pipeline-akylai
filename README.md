@@ -69,6 +69,7 @@ and saves them as processed or rejected files.
 3. Query: Athena makes it available to run  SQL on the processed Parquet files in place, using the table
  definitions stored in the Glue Data Catalog.
 
+<img width="699" height="226" alt="monitoring_diagram" src="https://github.com/user-attachments/assets/90434410-162a-4658-82ff-ffe998fb624d" />
 
 
 
