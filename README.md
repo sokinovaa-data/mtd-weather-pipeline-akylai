@@ -127,8 +127,10 @@ Retention
 Raw and processed files are kept. A rerun replaces that day’s processed file.
 S3 versioning is on, and a lifecycle rule removes old versions.
 Lambda logs expire after 14 days.
-```
 
+Results:
+
+<img width="1065" height="385" alt="Screenshot 2026-10-28 at 12 42 19 PM" src="https://github.com/user-attachments/assets/04d5a028-151a-4213-95fb-cea6b2d29539" />
 
 
 
