@@ -1,0 +1,241 @@
+#after dedup---a count of rows, and it proves the pipeline’s cleaning
+$    aws logs filter-log-events --log-group-name /aws-glue/jobs/output --filter-pattern '"after dedup"' --region us-east-2 --query "events[].message" --output text --no-cli-pager
+2026-10-14: 64604 raw rows, 60997 after dedup, 60997 good, 0 rejected
+        2026-10-14: 64604 raw rows, 60997 after dedup, 60997 good, 0 rejected
+        2026-10-14: 64604 raw rows, 60997 after dedup, 60997 good, 0 rejected
+        2026-10-15: 64297 raw rows, 61170 after dedup, 61170 good, 0 rejected
+
+2026-10-13: 64653 raw rows, 61235 after dedup, 61235 good, 0 rejected
+        2026-10-12: 59445 raw rows, 56502 after dedup, 56502 good, 0 rejected
+
+2026-10-15: 2993474 raw rows, 2989841 after dedup, 2986995 good, 2846 rejected, 0 with a delay field
+        2026-10-15: 2993474 raw rows, 2989841 after dedup, 2986995 good, 2846 rejected, 0 with a delay field
+        2026-10-14: 2997676 raw rows, 2983681 after dedup, 2980813 good, 2868 rejected, 0 with a delay field
+        2026-10-13: 2965308 raw rows, 2955044 after dedup, 2952185 good, 2859 rejected, 0 with a delay field
+        2026-10-15: 2993474 raw rows, 2989841 after dedup, 2986995 good, 2846 rejected, 0 with a delay field
+
+2026-10-16 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Mostly Cloudy': 3, 'Light Rain': 5, 'Cloudy': 11, 'Light Rain and Fog/Mist': 2, 'Cloudy and Windy': 1, 'Clear': 1, 'Partly Cloudy': 1}
+
+2026-10-18: 26284 raw rows, 25183 after dedup, 25183 good, 0 rejected
+        2026-10-18 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+        2026-10-18: 1241484 raw rows, 1236373 after dedup, 1236373 good, 0 rejected, 0 with a delay field
+
+2026-10-19: 62993 raw rows, 59306 after dedup, 59306 good, 0 rejected
+        2026-10-19 weather: 24 files, 24 raw rows, 22 after dedup, 22 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 22}
+        2026-10-19: 2809765 raw rows, 2795656 after dedup, 2792807 good, 2849 rejected, 0 with a delay field
+
+2026-10-16: 64712 raw rows, 61802 after dedup, 61802 good, 0 rejected
+        2026-10-13 weather: 21 files, 21 raw rows, 20 after dedup, 20 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 20}
+        2026-10-16: 3002250 raw rows, 2987938 after dedup, 2985257 good, 2681 rejected, 0 with a delay field
+        2026-10-17: 1636225 raw rows, 1631078 after dedup, 1631078 good, 0 rejected, 0 with a delay field
+        2026-10-16: 64712 raw rows, 61802 after dedup, 61802 good, 0 rejected
+        2026-10-17: 31790 raw rows, 30665 after dedup, 30665 good, 0 rejected
+        2026-10-20: 68456 raw rows, 65105 after dedup, 65105 good, 0 rejected
+        2026-10-20 weather: 24 files, 24 raw rows, 22 after dedup, 22 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 22}
+        2026-10-20: 3072468 raw rows, 3050090 after dedup, 3047252 good, 2838 rejected, 0 with a delay field
+
+2026-10-14 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 9, 'Cloudy': 7, 'Partly Cloudy': 4, 'Mostly Cloudy': 2, 'Mostly Clear': 2}
+        2026-10-15 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Light Rain': 1, 'Cloudy': 14, 'Clear': 1, 'Fog/Mist': 3, 'Mostly Clear': 2, 'Rain and Fog/Mist': 1, 'Light Rain and Fog/Mist': 1, 'Mostly Cloudy': 1}
+        2026-10-17 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 19, 'Partly Cloudy': 2, 'Mostly Clear': 1, 'Cloudy': 1, 'Mostly Cloudy': 1}
+
+2026-10-21 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 23, 'Mostly Clear': 1}
+        2026-10-21: 69372 raw rows, 65999 after dedup, 65999 good, 0 rejected
+        2026-10-21: 3089640 raw rows, 3067789 after dedup, 3064961 good, 2828 rejected, 0 with a delay field
+
+2026-10-22: 68510 raw rows, 65367 after dedup, 65367 good, 0 rejected
+        2026-10-22 weather: 24 files, 24 raw rows, 14 after dedup, 14 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 11, 'Cloudy': 1, 'Mostly Cloudy': 1, 'Mostly Clear': 1}
+        2026-10-22: 3077870 raw rows, 3060876 after dedup, 3058120 good, 2756 rejected, 0 with a delay field
+
+2026-10-23 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+        2026-10-23: 67993 raw rows, 64935 after dedup, 64935 good, 0 rejected
+        2026-10-23: 3083818 raw rows, 3071668 after dedup, 3068786 good, 2882 rejected, 0 with a delay field
+
+2026-10-24: 34029 raw rows, 32757 after dedup, 32757 good, 0 rejected
+        2026-10-24 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+        2026-10-24: 1634933 raw rows, 1626246 after dedup, 1626246 good, 0 rejected, 0 with a delay field
+
+2026-10-25: 26183 raw rows, 25123 after dedup, 25123 good, 0 rejected
+        2026-10-25 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+        2026-10-25: 1244591 raw rows, 1242857 after dedup, 1242857 good, 0 rejected, 0 with a delay field
+
+2026-10-26 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+        2026-10-26: 62640 raw rows, 59612 after dedup, 59612 good, 0 rejected
+        2026-10-26: 2802073 raw rows, 2778233 after dedup, 2775400 good, 2833 rejected, 0 with a delay field
+
+2026-10-27: 67696 raw rows, 64378 after dedup, 64378 good, 0 rejected
+        2026-10-27 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Fog/Mist': 7, 'Clear': 14, 'Mostly Clear': 2, '': 1}
+        2026-10-27: 3036378 raw rows, 3021633 after dedup, 3021633 good, 0 rejected, 0 with a delay field
+
+2026-10-28: 67680 raw rows, 64478 after dedup, 64478 good, 0 rejected
+        2026-10-28 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 12, 'Partly Cloudy': 3, 'Cloudy': 5, 'Mostly Cloudy': 4}
+        2026-10-28: 3042053 raw rows, 3030959 after dedup, 3030959 good, 0 rejected, 0 with a delay field
+
+2026-10-29: 68112 raw rows, 65090 after dedup, 65090 good, 0 rejected
+        2026-10-29 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 15, 'Mostly Clear': 2, 'Mostly Cloudy': 3, 'Cloudy': 1, 'Partly Cloudy': 3}
+        2026-10-29: 3079106 raw rows, 3064979 after dedup, 3064979 good, 0 rejected, 0 with a delay field
+
+2026-10-30: 68416 raw rows, 65303 after dedup, 65303 good, 0 rejected
+        2026-10-30 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 14, 'Partly Cloudy': 2, 'Mostly Cloudy': 2, 'Cloudy': 5, 'Mostly Clear': 1}
+        2026-10-30: 3066943 raw rows, 3047993 after dedup, 3047993 good, 0 rejected, 0 with a delay field
+
+2026-10-31 weather: 24 files, 24 raw rows, 23 after dedup, 23 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 5, 'Cloudy': 8, 'Partly Cloudy': 4, 'Mostly Clear': 4, 'Mostly Cloudy': 2}
+        2026-10-31: 33082 raw rows, 31960 after dedup, 31960 good, 0 rejected
+        2026-10-31: 1654199 raw rows, 1647581 after dedup, 1647581 good, 0 rejected, 0 with a delay field
+
+2026-11-01 weather: 24 files, 24 raw rows, 23 after dedup, 23 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Cloudy': 15, 'Partly Cloudy': 4, 'Mostly Cloudy': 2, 'Light Rain': 2}
+        2026-11-01: 25687 raw rows, 24858 after dedup, 24858 good, 0 rejected
+        2026-11-01: 1218205 raw rows, 1214645 after dedup, 1214645 good, 0 rejected, 0 with a delay field
+
+2026-11-02: 60134 raw rows, 57187 after dedup, 57187 good, 0 rejected
+        2026-11-02 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Cloudy': 16, 'Fog/Mist': 7, '': 1}
+        2026-11-02: 2694242 raw rows, 2686942 after dedup, 2686942 good, 0 rejected, 0 with a delay field
+
+2026-11-03 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Mostly Cloudy': 4, 'Cloudy': 12, '': 1, 'Cloudy and Windy': 2, 'Mostly Clear': 3, 'Clear': 1, 'Partly Cloudy': 1}
+        2026-11-03: 3042132 raw rows, 3035418 after dedup, 3035418 good, 0 rejected, 0 with a delay field
+        2026-11-03: 67549 raw rows, 64257 after dedup, 64257 good, 0 rejected
+
+2026-11-04: 68357 raw rows, 65081 after dedup, 65081 good, 0 rejected
+        2026-11-04 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 1 with a precipitation value
+Conditions seen: {'Cloudy': 11, 'Light Rain and Fog/Mist': 1, 'Mostly Clear': 1, 'Mostly Cloudy': 5, 'Light Rain': 6}
+        2026-11-04: 3058885 raw rows, 3047929 after dedup, 3047929 good, 0 rejected, 0 with a delay field
+
+2026-11-05 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Mostly Cloudy': 3, 'Cloudy': 19, 'Clear': 2}
+        2026-11-05: 68077 raw rows, 64936 after dedup, 64936 good, 0 rejected
+        2026-11-05: 3070726 raw rows, 3059682 after dedup, 3059682 good, 0 rejected, 0 with a delay field
+
+2026-11-06 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Light Rain and Fog/Mist': 2, 'Cloudy': 14, 'Clear': 3, 'Partly Cloudy': 3, 'Mostly Clear': 2}
+        2026-11-06: 65913 raw rows, 63164 after dedup, 63164 good, 0 rejected
+        2026-11-06: 3017432 raw rows, 3011601 after dedup, 3011601 good, 0 rejected, 0 with a delay field
+
+2026-11-07 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+        2026-11-07: 36359 raw rows, 35040 after dedup, 35040 good, 0 rejected
+        2026-11-07: 1707196 raw rows, 1696699 after dedup, 1696699 good, 0 rejected, 0 with a delay field
+
+2026-11-08: 26922 raw rows, 25866 after dedup, 25866 good, 0 rejected
+        2026-11-08 weather: 24 files, 24 raw rows, 22 after dedup, 22 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 21, 'Fog/Mist': 1}
+        2026-11-08: 1301721 raw rows, 1297571 after dedup, 1297571 good, 0 rejected, 0 with a delay field
+
+2026-11-09 weather: 24 files, 24 raw rows, 22 after dedup, 22 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 20, '': 2}
+        2026-11-09: 55952 raw rows, 46723 after dedup, 46723 good, 0 rejected
+        2026-11-09: 2712852 raw rows, 2559859 after dedup, 2543579 good, 16280 rejected, 0 with a delay field
+
+2026-11-10: 60593 raw rows, 39502 after dedup, 39502 good, 0 rejected
+        2026-11-10 weather: 24 files, 24 raw rows, 22 after dedup, 22 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 21, '': 1}
+        2026-11-10: 3020509 raw rows, 2857160 after dedup, 2839592 good, 17568 rejected, 0 with a delay field
+
+~ $
+#Conditions seen---a summary of the weather, and it shows what the data contained
+~ $    aws logs filter-log-events --log-group-name /aws-glue/jobs/output --filter-pattern '"Conditions seen"' --region us-east-2 --query "events[].message" --output text --no-cli-pager
+2026-10-16 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Mostly Cloudy': 3, 'Light Rain': 5, 'Cloudy': 11, 'Light Rain and Fog/Mist': 2, 'Cloudy and Windy': 1, 'Clear': 1, 'Partly Cloudy': 1}
+
+2026-10-18 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+
+2026-10-19 weather: 24 files, 24 raw rows, 22 after dedup, 22 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 22}
+
+2026-10-13 weather: 21 files, 21 raw rows, 20 after dedup, 20 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 20}
+        2026-10-20 weather: 24 files, 24 raw rows, 22 after dedup, 22 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 22}
+
+2026-10-14 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 9, 'Cloudy': 7, 'Partly Cloudy': 4, 'Mostly Cloudy': 2, 'Mostly Clear': 2}
+        2026-10-15 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Light Rain': 1, 'Cloudy': 14, 'Clear': 1, 'Fog/Mist': 3, 'Mostly Clear': 2, 'Rain and Fog/Mist': 1, 'Light Rain and Fog/Mist': 1, 'Mostly Cloudy': 1}
+        2026-10-17 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 19, 'Partly Cloudy': 2, 'Mostly Clear': 1, 'Cloudy': 1, 'Mostly Cloudy': 1}
+
+2026-10-21 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 23, 'Mostly Clear': 1}
+
+2026-10-22 weather: 24 files, 24 raw rows, 14 after dedup, 14 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 11, 'Cloudy': 1, 'Mostly Cloudy': 1, 'Mostly Clear': 1}
+
+2026-10-23 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+
+2026-10-24 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+
+2026-10-25 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+
+2026-10-26 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+
+2026-10-27 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Fog/Mist': 7, 'Clear': 14, 'Mostly Clear': 2, '': 1}
+
+2026-10-28 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 12, 'Partly Cloudy': 3, 'Cloudy': 5, 'Mostly Cloudy': 4}
+
+2026-10-29 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 15, 'Mostly Clear': 2, 'Mostly Cloudy': 3, 'Cloudy': 1, 'Partly Cloudy': 3}
+
+2026-10-30 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 14, 'Partly Cloudy': 2, 'Mostly Cloudy': 2, 'Cloudy': 5, 'Mostly Clear': 1}
+
+2026-10-31 weather: 24 files, 24 raw rows, 23 after dedup, 23 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 5, 'Cloudy': 8, 'Partly Cloudy': 4, 'Mostly Clear': 4, 'Mostly Cloudy': 2}
+
+2026-11-01 weather: 24 files, 24 raw rows, 23 after dedup, 23 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Cloudy': 15, 'Partly Cloudy': 4, 'Mostly Cloudy': 2, 'Light Rain': 2}
+
+2026-11-02 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Cloudy': 16, 'Fog/Mist': 7, '': 1}
+
+2026-11-03 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Mostly Cloudy': 4, 'Cloudy': 12, '': 1, 'Cloudy and Windy': 2, 'Mostly Clear': 3, 'Clear': 1, 'Partly Cloudy': 1}
+
+2026-11-04 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 1 with a precipitation value
+Conditions seen: {'Cloudy': 11, 'Light Rain and Fog/Mist': 1, 'Mostly Clear': 1, 'Mostly Cloudy': 5, 'Light Rain': 6}
+
+2026-11-05 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Mostly Cloudy': 3, 'Cloudy': 19, 'Clear': 2}
+
+2026-11-06 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Light Rain and Fog/Mist': 2, 'Cloudy': 14, 'Clear': 3, 'Partly Cloudy': 3, 'Mostly Clear': 2}
+
+2026-11-07 weather: 24 files, 24 raw rows, 24 after dedup, 24 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 24}
+
+2026-11-08 weather: 24 files, 24 raw rows, 22 after dedup, 22 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 21, 'Fog/Mist': 1}
+
+2026-11-09 weather: 24 files, 24 raw rows, 22 after dedup, 22 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 20, '': 2}
+
+2026-11-10 weather: 24 files, 24 raw rows, 22 after dedup, 22 good, 0 rejected, 0 with a precipitation value
+Conditions seen: {'Clear': 21, '': 1}
+
+~ $
