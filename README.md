@@ -134,6 +134,25 @@ Results:
 
 
 
+Collection window: 2026-10-12 to 2026-11-11 (about 30 days).
+Full Glue log lines: glue_run_results.txt
 
+## Vehicle positions (raw rows, then after deduplication; 0 rejected)
+- 2026-10-12: 59,445 then 56,502
+- 2026-10-13: 64,653 then 61,235
+- 2026-10-14: 64,604 then 60,997
+- 2026-10-15: 64,297 then 61,170
+
+## Trip updates (about 3 million rows a day)
+- 2026-10-14: 2,997,676 raw, 2,980,813 kept, 2,868 rejected
+- 0 predictions with a delay value on every day checked
+
+## Weather
+- 2026-10-16: 24 readings, 0 rejected, 0 with a precipitation value, rain in 7 of 24 hours
+
+## Other checks
+- 1,851 of 1,851 realtime trips matched the static schedule (2026-10-14)
+- First full day of vehicle collection: 1,396 files, 60 per full hour
+- Rerunning a day gave identical counts
 
 
