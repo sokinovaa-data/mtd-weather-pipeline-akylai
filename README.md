@@ -19,18 +19,15 @@ Phase 2: The pipeline also loads the processed data into Redshift Serverless. (S
 
 ```text
 ├── architecture
-│   └── .gitkeep
 ├── docs
 │   ├── what_the_data_contains.md
 │   └── .gitkeep
 ├── glue
-│   ├── .gitkeep
 │   ├── transform_static_gtfs.py
 │   ├── transform_trip_updates.py
 │   ├── transform_vehicle_positions.py
 │   └── transform_weather.py
 ├── ingestion
-│   ├── .gitkeep
 │   ├── explore_static_gtfs.py
 │   ├── fetch_feed.py
 │   ├── fetch_weather.py
@@ -41,8 +38,6 @@ Phase 2: The pipeline also loads the processed data into Redshift Serverless. (S
 │   ├── .gitkeep
 │   └── weather_sample.json
 ├── sql
-│   ├── sql
-│   ├── .gitkeep
 │   ├── 02_trip_updates.sql
 │   ├── 03_static_gtfs.sql
 │   └── transform_static_gtfs.sql
@@ -64,7 +59,7 @@ Python, SQL, PySpark, AWS Lambda, EventBridge, S3, Glue, Athena, CloudWatch, SNS
 1. Collect: EventBridge triggers 5 Lambda functions on schedule to collect the data from
 sources:
 .\
-Source1:MTD Bus Schedules https://developer.cumtd.com/ .\
+Source1:MTD Bus Schedules https://mtd.dev/
 Source2: https://api.weather.gov/ 
 
 (every 1 minute, 2 minutes, 10 minutes, 1 hour, and 1 day) and saves them as raw files in an S3 bucket.
